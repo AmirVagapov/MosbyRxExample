@@ -17,13 +17,20 @@ import com.vagapov.amir.a3lesson1.presenter.InfoPresenterImpl;
 
 import java.util.ArrayList;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 public class InfoActivity extends MvpLceViewStateActivity<RecyclerView, ArrayList<String>,
         InfoView, InfoPresenter>
         implements InfoView {
 
     private static final String ERROR = "Unknown Error";
+
+    @NonNull
     private MyRecyclerViewAdapter adapter;
 
+    @BindView(R.id.swipe_layout)
+    SwipeRefreshLayout swipeRefreshLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,17 +38,15 @@ public class InfoActivity extends MvpLceViewStateActivity<RecyclerView, ArrayLis
         setRetainInstance(true);
         setContentView(R.layout.activity_info);
         initUI();
+        ButterKnife.bind(this);
     }
 
     private void initUI() {
-        final SwipeRefreshLayout swipeRefreshLayout = findViewById(R.id.swipe_layout);
-        swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
-            @Override
-            public void onRefresh() {
-                swipeRefreshLayout.setRefreshing(false);
-                updateAdapter();
-                loadData(false);
-            }
+
+        swipeRefreshLayout.setOnRefreshListener(() -> {
+            swipeRefreshLayout.setRefreshing(false);
+            updateAdapter();
+            loadData(false);
         });
         contentView.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
         updateAdapter();
@@ -61,7 +66,7 @@ public class InfoActivity extends MvpLceViewStateActivity<RecyclerView, ArrayLis
     }
 
     @Override
-    public void setData(ArrayList<String> arrayList) {
+    public void setData(@NonNull ArrayList<String> arrayList) {
         adapter.setList(arrayList);
     }
 
@@ -72,11 +77,13 @@ public class InfoActivity extends MvpLceViewStateActivity<RecyclerView, ArrayLis
     }
 
 
+    @NonNull
     @Override
     public LceViewState<ArrayList<String>, InfoView> createViewState() {
         return new RetainingLceViewState<>();
     }
 
+    @NonNull
     @Override
     public ArrayList<String> getData() {
         return ((MyRecyclerViewAdapter) contentView.getAdapter()).getList();
