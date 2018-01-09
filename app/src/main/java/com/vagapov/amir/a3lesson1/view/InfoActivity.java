@@ -26,7 +26,7 @@ public class InfoActivity extends MvpLceViewStateActivity<RecyclerView, ArrayLis
 
     private static final String ERROR = "Unknown Error";
 
-    @NonNull
+
     private MyRecyclerViewAdapter adapter;
 
     @BindView(R.id.swipe_layout)
@@ -37,8 +37,8 @@ public class InfoActivity extends MvpLceViewStateActivity<RecyclerView, ArrayLis
         super.onCreate(savedInstanceState);
         setRetainInstance(true);
         setContentView(R.layout.activity_info);
-        initUI();
         ButterKnife.bind(this);
+        initUI();
     }
 
     private void initUI() {
@@ -90,6 +90,7 @@ public class InfoActivity extends MvpLceViewStateActivity<RecyclerView, ArrayLis
     }
 
 
+    @NonNull
     private void updateAdapter() {
         adapter = new MyRecyclerViewAdapter();
         contentView.setAdapter(adapter);
