@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+    <ImageView
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:layout_width="152dp"
+        android:layout_height="200dp"
+        android:id="@+id/user_image"
+        android:layout_margin="8dp"/>
+
+    <LinearLayout
+        android:background="@android:color/darker_gray"
+        android:layout_width="1dp"
+        android:layout_height="match_parent"/>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <LinearLayout
+        style="@style/linear_layout_for_text">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/login"
+            style="@style/user_description_text"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/user_login_text_view"
+        tools:text="Some login"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/linear_layout_for_text">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/id"
+            style="@style/user_description_text"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/user_id_text_view"
+        tools:text="Some id"/>
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/linear_layout_for_text">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/name"
+            style="@style/user_description_text"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/user_name_text_view"
+        tools:text="Some name"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        style="@style/linear_layout_for_text">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/company"
+            style="@style/user_description_text"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/user_workplace_text_view"
+        tools:text="Some company"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        style="@style/linear_layout_for_text">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/city"
+            style="@style/user_description_text"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/user_city_text_view"
+        tools:text="Some city"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        style="@style/linear_layout_for_text">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/email"
+            style="@style/user_description_text"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/user_site_text_view"
+        tools:text="Some site"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        style="@style/linear_layout_for_text">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/bio"
+            style="@style/user_description_text"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/user_bio_text_view"
+        tools:text="Users biography"/>
+
+    </LinearLayout>
+
+    </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>
+
+

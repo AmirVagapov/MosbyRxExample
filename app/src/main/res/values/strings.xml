@@ -1,3 +1,12 @@
 <resources>
-    <string name="app_name">A3Lesson1</string>
+    <string name="app_name">ViewerForGitHub</string>
+    <string name="information_absent">Information is absent</string>
+    <string name="login">Login: </string>
+    <string name="id">ID: </string>
+    <string name="name">Name: </string>
+    <string name="company">Company: </string>:
+    <string name="city">City: </string>
+    <string name="email">Email: </string>
+    <string name="bio">Biography: </string>
+    <string name="url_git_hub">https://api.github.com/</string>
 </resources>

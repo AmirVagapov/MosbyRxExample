@@ -1,12 +1,9 @@
 package com.vagapov.amir.a3lesson1.view;
 
-import com.hannesdorfmann.mosby.mvp.MvpView;
 import com.hannesdorfmann.mosby.mvp.lce.MvpLceView;
+import com.vagapov.amir.a3lesson1.model.entity.FictitiousInterface;
 
-import java.util.ArrayList;
 
-
-public interface InfoView  extends MvpLceView<ArrayList<String>>{
-
+public interface InfoView  extends MvpLceView<FictitiousInterface>{
 
 }
