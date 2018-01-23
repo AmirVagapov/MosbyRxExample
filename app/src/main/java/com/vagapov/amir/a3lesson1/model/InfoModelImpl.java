@@ -89,7 +89,7 @@ public class InfoModelImpl implements InfoModel {
                     fillUserDescription(realmObject, githubUser);
                 }
             });
-        }).map(Collections::singletonList);
+        }).map((Func1<GithubUser, List<FictitiousInterface>>) Collections::singletonList);
     }
 
     private void fillUserDescription(GithubUser realmObject, GithubUser githubUser) {

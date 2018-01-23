@@ -20,7 +20,7 @@ public interface InfoModel  {
     Observable<? extends List<? extends FictitiousInterface>> lifecycle(); //Открываем закрываем DB
 
     @NonNull
-    Observable<? extends List<? extends FictitiousInterface>> observeInfo(); //обновляем View
+    Observable<? extends List<? extends FictitiousInterface>> observeInfo(); //обновляем View данными из БД
 
     @NonNull
     Observable<? extends List<? extends FictitiousInterface>> updateInfo();// обновляем инфу в DB
